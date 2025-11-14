@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <!-- Définition codage utf8, nom et style page web, et chargement des librairies -->
+    <meta charset="utf8" />
+    <title>Lieux de travail mobilisés contre les coupes budgétaires !</title>
+
+    <!-- Viewport pour mobile -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+          user-scalable=no">
+
+    <!-- Chargement des librairies pour leaflet, jquery, markercluster -->
+    <!-- ✅ Versions mises à jour et HTTPS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+    <!-- ✅ jQuery mis à jour et HTTPS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Chargement fichier style CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Chargement des données qui se trouve toutes dans le dossier data -->
+    <script src="data/usinBio.js"></script>
+    <script src="data/parcEol.js"></script>
+    <script src="data/centHyd.js"></script>
+    <script src="data/centNuc.js"></script>
+    <script src="data/eolien.js"></script>
+    <script src="data/FronCH.js"></script>
+    <script src="data/description.js"></script>
+  </head>
+
+  <body>
+    <h1>Cartographie des lieux en lutte ! </h1>
+    <!-- Création de la carte interactive et de sidebar à coté -->
+    <div class="main">
+      <div id="map" class="carte-interactive"></div>
+      <div id="coordonnees">Coordonnées: déplacez la souris sur la carte</div>
+    <!-- Bouton flottant (visible uniquement sur mobile) -->
+    <button id="openSidebarBtn" aria-label="Ouvrir le panneau d informations">☰</button>
+
+    <!-- Barre latérale (initialement fermée) -->
+    <div id="sidebar" class="closed">
+        <button id="closeBtn" aria-label="Fermer le panneau">✕</button>
+        <div id="sidebar-content"></div>
+    </div>
+        <div class="copyright">
+          <p>Source des données:<br />SSP Vaud, 2025
+          <br />
+          2025 © SSP Vaud
+        </div>
+
+      </div>
+    </div>
+    <!-- ✅ Point-virgule supprimé -->
+    <script src="index.js"></script>
+  </body>
+</html>
