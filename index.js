@@ -41,7 +41,7 @@ const orangeIcon = L.icon({
 
 // Cluster pour type "lieu" (bleu)
 const clusterGroupA = L.markerClusterGroup({
-    maxClusterRadius: 20,
+    maxClusterRadius: 80,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -61,7 +61,7 @@ const clusterGroupA = L.markerClusterGroup({
 
 // Cluster pour type "action" (orange)
 const clusterGroupB = L.markerClusterGroup({
-    maxClusterRadius: 5,
+    maxClusterRadius: 80,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -114,23 +114,38 @@ L.Control.FilterControl = L.Control.extend({
         container.style.padding = '10px';
         container.style.borderRadius = '4px';
         container.style.boxShadow = '0 1px 5px rgba(0,0,0,0.4)';
+        container.style.transition = 'all 0.3s ease-in-out';
         
      container.innerHTML = `
-            <div style="font-weight: bold; margin-bottom: 8px; font-size: 14px;">Filtres</div>
-            <label style="display: flex; align-items: center; gap: 6px; margin: 6px 0; cursor: pointer; user-select: none;">
-                <input type="checkbox" id="filterA" checked style="cursor: pointer;">
-                <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" 
-                     style="width: 15px; height: 25px; display: inline-block;" 
-                     alt="Marqueur bleu">
-                <span style="font-size: 13px;">Lieu mobilisé</span>
-            </label>
-            <label style="display: flex; align-items: center; gap: 6px; margin: 6px 0; cursor: pointer; user-select: none;">
-                <input type="checkbox" id="filterB" checked style="cursor: pointer;">
-                <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" 
-                     style="width: 15px; height: 25px; display: inline-block;" 
-                     alt="Marqueur orange">
-                <span style="font-size: 13px;">Action durant la journée</span>
-            </label>
+            <button id="toggleFilters" style="
+                display: none;
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 8px;
+                background: #0066ff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+            ">🔽 Filtres</button>
+            <div id="filterContent">
+                <div style="font-weight: bold; margin-bottom: 8px; font-size: 14px;">Filtres</div>
+                <label style="display: flex; align-items: center; gap: 6px; margin: 6px 0; cursor: pointer; user-select: none;">
+                    <input type="checkbox" id="filterA" checked style="cursor: pointer;">
+                    <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" 
+                         style="width: 15px; height: 25px; display: inline-block;" 
+                         alt="Marqueur bleu">
+                    <span style="font-size: 13px;">Lieu mobilisé</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 6px; margin: 6px 0; cursor: pointer; user-select: none;">
+                    <input type="checkbox" id="filterB" checked style="cursor: pointer;">
+                    <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" 
+                         style="width: 15px; height: 25px; display: inline-block;" 
+                         alt="Marqueur orange">
+                    <span style="font-size: 13px;">Action durant la journée</span>
+                </label>
+            </div>
         `;
         
         // Empêcher la propagation des clics sur la carte
@@ -183,6 +198,22 @@ function updateFilters() {
 setTimeout(() => {
     document.getElementById('filterA').addEventListener('change', updateFilters);
     document.getElementById('filterB').addEventListener('change', updateFilters);
+    
+    // Gestion du bouton toggle sur mobile
+    const toggleBtn = document.getElementById('toggleFilters');
+    const filterContent = document.getElementById('filterContent');
+    let filtersExpanded = true;
+    
+    toggleBtn.addEventListener('click', () => {
+        filtersExpanded = !filtersExpanded;
+        if (filtersExpanded) {
+            filterContent.style.display = 'block';
+            toggleBtn.innerHTML = '🔽 Filtres';
+        } else {
+            filterContent.style.display = 'none';
+            toggleBtn.innerHTML = '▶️ Filtres';
+        }
+    });
 }, 100);
 
 /* ==========================================================
