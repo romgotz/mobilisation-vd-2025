@@ -1,28 +1,41 @@
 /* ==========================================================
-  Styles de base – la carte occupe tout l’écran
+  Styles de base – la carte occupe tout l'écran
 ========================================================== */
 html, body { height: 100%; margin: 0; }
 #map { width: 90%; height: 88%; }
 
-/* ==========================================================
+/*
 Barre latérale – version desktop (à droite)
 ========================================================== */
 #sidebar {
     position: absolute;
-    top: 59;
-    right: 119;                 /* côté droit sur desktop */
+    top: 59px;
+    right: 119px;               /* côté droit sur desktop */
     width: 320px;
     max-width: 80%;
-    height: 50%;
+    min-height: 200px;          /* Hauteur minimale */
+    max-height: 80vh;           /* Maximum 80% de la hauteur de l'écran */
+    height: auto;               /* S'adapte au contenu */
     background: #fff;
     box-shadow: -2px 0 5px rgba(0,0,0,.3);
     overflow-y: auto;
-    transition: transform .3s ease-in-out;
-    z-index: 1000;            /* au‑dessus de la carte */
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000;              /* au-dessus de la carte */
+    opacity: 1;
+    visibility: visible;
 }
-#sidebar.closed { transform: translateX(300%); }
+#sidebar.closed { 
+    opacity: 0;
+    visibility: hidden;
+}
 
-/* Bouton de fermeture (déjà présent) */
+/* ✅ Contenu de la sidebar avec padding pour éviter la superposition */
+#sidebar-content {
+    padding: 40px 10px 10px 10px;  /* 50px en haut pour éviter le bouton */
+    overflow-y: auto;
+}
+
+/* Bouton de fermeture */
 #closeBtn {
     position: absolute;
     top: 10px;
@@ -31,6 +44,15 @@ Barre latérale – version desktop (à droite)
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
+    z-index: 5;                /* ✅ Au-dessus du contenu */
+    padding: 5px;
+    line-height: 1;
+}
+
+/* ✅ Style amélioré pour le bouton (optionnel mais recommandé) */
+#closeBtn:hover {
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
 /* ==========================================================
@@ -38,7 +60,7 @@ Responsive – mobile / tablettes
 ========================================================== */
 @media (max-width: 768px) {
 
-    /* La carte garde toute la hauteur, le bouton flotte au‑dessus */
+    /* La carte garde toute la hauteur, le bouton flotte au-dessus */
     #map { height: 100vh; }
 
     /* Bouton flottant – uniquement visible sur petit écran */
@@ -69,7 +91,7 @@ Responsive – mobile / tablettes
         left: 0;
         width: 100%;
         max-width: none;
-        height: 70vh;                /* 70 % de la hauteur de l’écran */
+        height: 70vh;               /* 70% de la hauteur de l'écran */
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         box-shadow: 0 -2px 8px rgba(0,0,0,.3);
@@ -78,51 +100,30 @@ Responsive – mobile / tablettes
     #sidebar.closed { transform: translateY(100%); }
     #sidebar:not(.closed) { transform: translateY(0); }
 
-    /* Déplacer le bouton de fermeture en haut‑droite du drawer */
+    /* Déplacer le bouton de fermeture en haut-droite du drawer */
     #closeBtn {
         top: 10px;
         right: 10px;
         left: auto;
+    }
+    
+    /* ✅ Ajuster le padding sur mobile */
+    #sidebar-content {
+        padding: 60px 20px 20px 20px;  /* Plus d'espace en haut sur mobile */
     }
 }
 
 /* ==========================================================
 Masquer le bouton flottant sur desktop
 ========================================================== */
-#openSidebarBtn { display: none; }   /* affiché seulement via la media query ci‑dessus */
+#openSidebarBtn { display: none; }   /* affiché seulement via la media query ci-dessus */
 
-/*body {
-  font-family: "Roboto";
-  font-size: 12pt;
-  margin: 30px;
-  text-align: justify;
-}
-
-.main {
-  position: relative;
-}
-.carte-interactive {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 850px;
-  height: 650px;
-  background-color: #f5f5dc;
-  border: 1px solid #666;
-}
-*/
-
-
-#coordonnees {
-  position: absolute;
-  left: 0;
-  top: 656px;
-  font-size: 11px;
-}
+/* ==========================================================
+Autres styles
+========================================================== */
 .copyright {
   position: absolute;
   bottom: 0;
   font-size: 8pt;
   margin-bottom: 0px;
 }
-
