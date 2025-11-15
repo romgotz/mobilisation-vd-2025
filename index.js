@@ -15,7 +15,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    2️⃣ Définition des icônes personnalisées
 ========================================================== */
 
-// Icône bleue par défaut (action "a")
+// Icône bleue par défaut (type "lieu")
 const blueIcon = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
@@ -25,7 +25,7 @@ const blueIcon = L.icon({
     shadowSize: [41, 41]
 });
 
-// Icône orange (action "b")
+// Icône orange (type "action")
 const orangeIcon = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
@@ -36,12 +36,12 @@ const orangeIcon = L.icon({
 });
 
 /* ==========================================================
-   3️⃣ Groupes de clusters séparés par action
+   3️⃣ Groupes de clusters séparés par type
 ========================================================== */
 
 // Cluster pour type "lieu" (bleu)
 const clusterGroupA = L.markerClusterGroup({
-    maxClusterRadius: 80,
+    maxClusterRadius: 20,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -59,9 +59,9 @@ const clusterGroupA = L.markerClusterGroup({
     }
 });
 
-// Cluster pour type "Action" (orange)
+// Cluster pour type "action" (orange)
 const clusterGroupB = L.markerClusterGroup({
-    maxClusterRadius: 80,
+    maxClusterRadius: 5,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -190,18 +190,34 @@ setTimeout(() => {
 ========================================================== */
 
 /**
- * Parse une ligne CSV simple.
- * Les colonnes sont maintenant : lat, lng, title, description, action
+ * Parse une ligne CSV en tenant compte des guillemets.
+ * Les colonnes sont : lat, lng, title, description, type
  */
 function parseCsvLine(line) {
-    const parts = line.split(',').map(p => p.trim());
+    const parts = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            parts.push(current.trim());
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    parts.push(current.trim()); // Ajouter le dernier champ
 
     return {
         lat: parseFloat(parts[0]),
         lng: parseFloat(parts[1]),
         title: parts[2],
-        description: parts[3].replace(/^"|"$/g, ''),
-        action: parts[4] || 'a'  // Par défaut "a" si la colonne est vide
+        description: parts[3].replace(/^"|"$/g, ''), // Retirer les guillemets
+        type: parts[4] ? parts[4].trim() : 'lieu'
     };
 }
 
@@ -225,8 +241,8 @@ async function loadMarkersFromCsv(csvUrl) {
 
             const data = parseCsvLine(line);
 
-            // Choisir l'icône selon la valeur de "action"
-            const icon = data.action === 'action' ? orangeIcon : blueIcon;
+            // Choisir l'icône selon la valeur de "type"
+            const icon = data.type === 'action' ? orangeIcon : blueIcon;
 
             // Créer le marqueur avec l'icône appropriée
             const marker = L.marker([data.lat, data.lng], { icon: icon });
@@ -234,29 +250,32 @@ async function loadMarkersFromCsv(csvUrl) {
 
             // Au clic → ouvrir le drawer avec les infos
             marker.on('click', () => {
-                const actionLabel = data.action === 'action' ? 'Action durant la journée' : 'Lieu mobilisé';
-                const actionColor = data.action === 'action' ? '#ff8c00' : '#2196F3';
+                const actionLabel = data.type === 'action' ? 'Action durant la journée' : 'Lieu mobilisé';
+                const actionColor = data.type === 'action' ? '#ff8c00' : '#2196F3';
+                
+                // Convertir les | en <br> pour les retours à la ligne
+                const formattedDescription = data.description.replace(/\|/g, '<br>');
                 
                 const html = `
                     <h2>${data.title}</h2>
                     <p style="color: ${actionColor}; font-weight: bold; margin: 10px 0;">
-                        📍 ${actionLabel}
+                        🏠 ${actionLabel}
                     </p>
-                    <p>${data.description}</p>
+                    <p>${formattedDescription}</p>
                 `;
                 openSidebar(html);
             });
 
             // Ajouter le marqueur au bon groupe de clusters
-            if (data.action === 'action') {
+            if (data.type === 'action') {
                 clusterGroupB.addLayer(marker);
             } else {
                 clusterGroupA.addLayer(marker);
             }
         });
 
-        console.log(`✅ ${clusterGroupA.getLayers().length} marqueurs Action A chargés`);
-        console.log(`✅ ${clusterGroupB.getLayers().length} marqueurs Action B chargés`);
+        console.log(`✅ ${clusterGroupA.getLayers().length} marqueurs "lieu" chargés`);
+        console.log(`✅ ${clusterGroupB.getLayers().length} marqueurs "action" chargés`);
 
     } catch (err) {
         console.error('Impossible de charger le CSV :', err);
