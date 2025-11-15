@@ -2,19 +2,26 @@
   Styles de base – la carte occupe tout l'écran
 ========================================================== */
 html, body { height: 100%; margin: 0; }
-#map { width: 90%; height: 88%; }
 
-/*
+.main {
+    position: relative; /* Important : conteneur de référence */
+    width: 100%;
+    height: 100%;
+}
+
+#map { width: 90%; height: 88%; 
+    position: relative; /* Important pour que la sidebar se positionne par rapport à la carte */}
+
+/* ==========================================================
 Barre latérale – version desktop (à droite)
 ========================================================== */
 #sidebar {
     position: absolute;
-    top: 59px;
-    right: 119px;               /* côté droit sur desktop */
-    width: 320px;
+    top: 10px;                  /* 10px du haut de la carte */
+    right: calc(10% + 10px);    /* 10% (marge de la carte) + 10px */    width: 320px;
     max-width: 80%;
     min-height: 200px;          /* Hauteur minimale */
-    max-height: 80vh;           /* Maximum 80% de la hauteur de l'écran */
+    max-height: calc(88vh - 20px); /* Maximum hauteur de la carte moins marges */
     height: auto;               /* S'adapte au contenu */
     background: #fff;
     box-shadow: -2px 0 5px rgba(0,0,0,.3);
@@ -23,6 +30,7 @@ Barre latérale – version desktop (à droite)
     z-index: 1000;              /* au-dessus de la carte */
     opacity: 1;
     visibility: visible;
+    border-radius: 4px;         /* Coins arrondis */
 }
 #sidebar.closed { 
     opacity: 0;
@@ -96,6 +104,9 @@ Responsive – mobile / tablettes
         border-top-right-radius: 12px;
         box-shadow: 0 -2px 8px rgba(0,0,0,.3);
         transform: translateY(100%); /* cachée par défaut */
+        transition: transform .3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
     }
     #sidebar.closed { transform: translateY(100%); }
     #sidebar:not(.closed) { transform: translateY(0); }
@@ -111,6 +122,11 @@ Responsive – mobile / tablettes
     #sidebar-content {
         padding: 60px 20px 20px 20px;  /* Plus d'espace en haut sur mobile */
     }
+    
+    /* ✅ Afficher le bouton toggle des filtres sur mobile */
+    #toggleFilters {
+        display: block !important;
+    }
 }
 
 /* ==========================================================
@@ -121,6 +137,13 @@ Masquer le bouton flottant sur desktop
 /* ==========================================================
 Autres styles
 ========================================================== */
+#coordonnees {
+  position: absolute;
+  left: 0;
+  top: 656px;
+  font-size: 11px;
+}
+
 .copyright {
   position: absolute;
   bottom: 0;
