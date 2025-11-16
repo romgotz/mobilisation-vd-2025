@@ -62,7 +62,7 @@ lat,lng,title,description,type
 46.531993359651906, 6.627069711027339,Bâtiment Administratif de la Pontaise,"En grève|Dès 7h45 - Piquets de grève |9h-10h30 - Café solidaire|11h-12h Conférence 'Capitalisme en crise et austerité : quand l'Etat est géré comme une entreprise privée'|12h30 - AG|14h-15h - Conférence 'Grèves en Suisse : entre conquêtes et perspectives'|15h30 - Atelier pancartes| 16h30 - Départ à la manif",lieu
 46.5266050475059, 6.643014225151977,CHUV,"En grève.|Programme| Dès 6h - Piquets de grève | 10h30 - AG|12h-13h - Rassemblement devant le BH|17h - Rassemblement et départ collectif pour la manif",lieu
 46.539629048986264, 6.652379962420256,Fondation Madame Charles Eynard Eynard,"En grève",lieu
-46.53115205877549, 6.612109151288422, Maison des Jeunes - Prilly, "En grève, lieu
+46.53115205877549, 6.612109151288422, Maison des Jeunes - Prilly, "En grève", lieu
 46.52131435121452, 6.581446925945201, UNIL, "Personnel et étudiant.es en grève | Programme | Dès 7h - Piquets de grève à Géopolis, Amphimax, Anthropole, Biophore | Matinée - Ateliers, Cours alternatifs, interventions dans les amphis | 12h - Bouffe pop' à Géopolis | 15h -  AG | 16h30 - Départ collectif pour la manifestation depuis Géopolis",lieu
 46.524917380974834, 6.638039839148172, CPNV - Site de César-Roux, "En grève", lieu
 46.44184722723823, 6.891508869833245, Ecole professionnelle de Montreux, "En grève", lieu
@@ -84,3 +84,4 @@ lat,lng,title,description,type
 46.52204135205969, 6.5970124339779055, EVAM, "En grève", lieu
 46.521477788452756, 6.63781202194692, Action - Secteur de l'accueil, "16h30 - Action pour soutenir l'EVAM", action
 46.526244601940085, 6.600449807105741, Sleep-In, "En grève", lieu
+
