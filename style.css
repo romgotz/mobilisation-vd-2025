@@ -1,7 +1,14 @@
 /* ==========================================================
   Styles de base – la carte occupe tout l'écran
 ========================================================== */
-html, body { height: 100%; margin: 0; }
+html, body { height: 100%; margin: 0; padding: 0; }
+
+
+h1 {
+  text-align: center;
+  margin: 10px auto;
+  padding: 0;
+}
 
 .main {
     position: relative; /* Important : conteneur de référence */
@@ -137,16 +144,13 @@ Masquer le bouton flottant sur desktop
 /* ==========================================================
 Autres styles
 ========================================================== */
-#coordonnees {
-  position: absolute;
-  left: 0;
-  top: 656px;
-  font-size: 11px;
-}
 
 .copyright {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  width: 90%;
   font-size: 8pt;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left;
 }
