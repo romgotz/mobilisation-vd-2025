@@ -76,7 +76,7 @@ lat,lng,title,description,type
 46.77037860088358, 6.648140406620807, EHNV - Yverdon, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
 46.52294499779811, 6.500467527512543, EHC Morges, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
 46.38041943289959, 6.92066125684209, HRC Rennaz, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.47907856869659, 6.852865131723796, Fondation du Nant, ""Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
+46.47907856869659, 6.852865131723796, Fondation du Nant, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
 46.60175194244001, 6.222078081481354, Pôle santé de la Vallée de Joux, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
 46.38372410801154, 6.2288229711795795, GHOL - Nyon,"Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
 46.53328351038571, 6.660711125153929, Le Foyer, "Action et mobilisation sur le lieu de travail", lieu
@@ -84,4 +84,5 @@ lat,lng,title,description,type
 46.52204135205969, 6.5970124339779055, EVAM, "En grève", lieu
 46.521477788452756, 6.63781202194692, Action - Secteur de l'accueil, "16h30 - Action pour soutenir l'EVAM", action
 46.526244601940085, 6.600449807105741, Sleep-In, "En grève", lieu
+
 
