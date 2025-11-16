@@ -41,7 +41,7 @@ const orangeIcon = L.icon({
 
 // Cluster pour type "lieu" (bleu)
 const clusterGroupA = L.markerClusterGroup({
-    maxClusterRadius: 80,
+    maxClusterRadius: 10,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -61,7 +61,7 @@ const clusterGroupA = L.markerClusterGroup({
 
 // Cluster pour type "action" (orange)
 const clusterGroupB = L.markerClusterGroup({
-    maxClusterRadius: 80,
+    maxClusterRadius: 5,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
@@ -293,6 +293,20 @@ async function loadMarkersFromCsv(csvUrl) {
                         🏠 ${actionLabel}
                     </p>
                     <p>${formattedDescription}</p>
+
+                    <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+                    <p style="font-size: 13px; color: #666; line-height: 1.5;">
+                        Retrouvez toutes les informations du SSP sur la mobilisation contre les coupes budgétaires 
+                        <a href="https://vaud.ssp-vpod.ch/themes/pour-la-survie-des-services-publics-et-parapublics/lad-du-ssp-vote-une-resolution-de-lutte-contre-les-mesures-dausterite/" 
+                           target="_blank" 
+                           style="color: #2196F3; text-decoration: none;">en suivant ce lien.</a>
+                    </p>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <img src="https://vaud.ssp-vpod.ch/site/assets/files/0/07/641/ssp_vaud.png" 
+                             alt="Logo SSP Vaud" 
+                             style="max-width: 150px; height: auto;">
+                    </div>
+
                 `;
                 openSidebar(html);
             });
