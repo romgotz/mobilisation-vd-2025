@@ -5,7 +5,7 @@ lat,lng,title,description,type
 46.63944672953115, 6.647403968421193,ES secondaire d'Echallens - Trois-Sapins,"En grève",lieu
 46.59458008144759, 6.767591627937038,EPS du Jorat,"En grève - Fermé l'après-midi",lieu
 46.664076792752326, 6.794189281916359,EP de Moudon - Lucens,"En grève - Fermé l'après-midi",lieu
-46.671901094299, 6.800652795747765,ES de Moudon - Lucens,"En grève - Fermé toute la journée",lieu
+46.671901094299, 6.800652795747765,ES de Moudon - Lucens,"En grève",lieu
 46.82335477175774, 6.941208012606603,ES  de Payerne et environs,"En grève",lieu
 46.550747016629956, 6.552091483758313,EPS de Bussigny et Villars-Ste-Croix,"En grève - Fermé toute la journée",lieu
 46.53499353956518, 6.573165210745519,EPS de Chavannes-près-Renens et de St-Sulpice,"En grève | Fermé l'après-midi au P et toute la journée au secondaire",lieu
@@ -39,6 +39,7 @@ lat,lng,title,description,type
 46.47157142076017, 6.845075639577858,EPS de Corsier-sur-Vevey et environs,"En grève | 2 sites fermées toute la journée, 2 l'après-midi",lieu
 46.50791408630064, 6.684955468414976,EPS de Lutry,"En grève",lieu
 46.435238722294514, 6.913222654917503,EPS de Montreux-Est,"En grève | Site de la Gare 33 (7-11) , collèges de Collonge, Glion, Vernex et Veytaux (1-6) fermés pour la journée / Collèges d'Etraz et Chernex (1-6) fermés l'après-midi",lieu
+46.44526471749292, 6.8988312530706795,EPS de Montreux-Ouest,"En grève",lieu
 46.57204908222817, 6.824099768418007,EPS d'Oron - Palézieux,"En grève - fermé l'après-midi",lieu
 46.51299969037001, 6.660032339579869,ES de Pully,"En grève",lieu
 46.50947118249321, 6.650263026085686,EP de Pully,"En grève - Fermé l'après-midi",lieu
@@ -63,7 +64,7 @@ lat,lng,title,description,type
 46.779539954259405, 6.668112973407221,Gymnase d'Yverdon,"En grève",lieu
 46.531993359651906, 6.627069711027339,Bâtiment Administratif de la Pontaise,"En grève|Dès 7h45 - Piquets de grève |9h-10h30 - Café solidaire|11h-12h Conférence 'Capitalisme en crise et austerité : quand l'Etat est géré comme une entreprise privée'|12h30 - AG|14h-15h - Conférence 'Grèves en Suisse : entre conquêtes et perspectives'|15h30 - Atelier pancartes| 16h30 - Départ à la manif",lieu
 46.5266050475059, 6.643014225151977,CHUV,"En grève.|Programme| Dès 6h - Piquets de grève | 10h30 - AG|12h-13h - Rassemblement devant le BH|17h - Rassemblement et départ collectif pour la manif",lieu
-46.539629048986264, 6.652379962420256,Fondation Madame Charles Eynard Eynard,"En grève",lieu
+46.539629048986264, 6.652379962420256,Fondation Madame Charles Eynard Eynard,"Lieu mobilisé !",lieu
 46.53115205877549, 6.612109151288422, Maison des Jeunes - Prilly, "En grève", lieu
 46.52131435121452, 6.581446925945201, UNIL, "Personnel et étudiant.es en grève | Programme | Dès 7h - Piquets de grève à Géopolis, Amphimax, Anthropole, Biophore | Matinée - Ateliers, Cours alternatifs, interventions dans les amphis | 12h - Bouffe pop' à Géopolis | 15h -  AG | 16h30 - Départ collectif pour la manifestation depuis Géopolis",lieu
 46.524917380974834, 6.638039839148172, CPNV - Site de César-Roux, "En grève", lieu
@@ -90,4 +91,5 @@ lat,lng,title,description,type
 46.519082445663734, 6.566828219244918, EPFL, "En grève", lieu
 46.82175230972882, 6.500950814045645, CPNV - Site de Ste-Croix, "En grève", lieu
 46.77369702700442, 6.634864727532476, CPNV - Site Yverdon-les-Bains, "En grève", lieu
-46.44526471749292, 6.8988312530706795,EPS de Montreux-Ouest,"En grève",lieu
+46.543960453181555, 6.6499233777664015, Institution de Lavigny - EMS Plein Soleil,"Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.5419189090534, 6.59057221773381, EMS Les Baumettes - Renens,"Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
