@@ -25,10 +25,11 @@ lat,lng,title,description,type
 46.52037332833328, 6.619472181909485,EPS Lausanne - Belvédère,"En grève - Fermé l'après-midi",lieu
 46.532185793183004, 6.621944454922087,EPS de Lausanne - Bergières,"En grève - Fermé l'après-midi",lieu
 46.52278369643984, 6.641871239580305,EPS de Lausanne - Béthusy,"En grève - Fermé toute la journée",lieu
-46.53741101415756, 6.630991110745695,EPS de Lausanne - CF Ramuz,"En grève- Fermé toute la journée",lieu
+46.53741101415756, 6.630991110745695,ES de Lausanne - CF Ramuz,"En grève- Fermé toute la journée",lieu
+46.536542196586396, 6.633020358709618,EP de Lausanne - Entrebois,"En grève- Fermé toute la journée",lieu
 46.53588767865661, 6.659003283757607,EP de Lausanne - Coteau Fleuri,"En grève - fermé l'après-midi",lieu
 46.51305860674805, 6.62376289725051,EP de Lausanne - Floréal,"En grève - Fermé l'après-midi",lieu
-46.5411857455945, 6.647020926087181,EPS de Lausanne - I.-de-Montolieu,"En grève | Site de Grand-Vennes (P et secondaire) fermé toute la journée",lieu
+46.5411857455945, 6.647020926087181,EPS de Lausanne - I.-de-Montolieu,"En grève | Site de Grand-Vennes (Primaire et Secondaire) fermé toute la journée",lieu
 46.53016397416625, 6.6455511064880275,EP de Lausanne - La Sallaz,"En grève - Fermé l'après-midi",lieu
 46.51037301570484, 6.631842197250383,EPS de Lausanne - L'Elysée,"En grève",lieu
 46.5210445838081, 6.641462339580235,EP de Lausanne - Mon-Repos,"En grève - Fermé l'après-midi",lieu
@@ -40,7 +41,8 @@ lat,lng,title,description,type
 46.435238722294514, 6.913222654917503,EPS de Montreux-Est,"En grève | Site de la Gare 33 (7-11) , collèges de Collonge, Glion, Vernex et Veytaux (1-6) fermés pour la journée / Collèges d'Etraz et Chernex (1-6) fermés l'après-midi",lieu
 46.57204908222817, 6.824099768418007,EPS d'Oron - Palézieux,"En grève - fermé l'après-midi",lieu
 46.51299969037001, 6.660032339579869,ES de Pully,"En grève",lieu
-46.45939435877983, 6.847640854918624,EPS de Vevey,"En grève",lieu
+46.50947118249321, 6.650263026085686,EP de Pully,"En grève - Fermé l'après-midi",lieu
+46.45939435877983, 6.847640854918624,EPS de Vevey,"En grève - Fermé toute la journée",lieu
 46.61046987580698, 6.506136610749137,ES de Cossonay et Penthalaz - Pré aux Moines,"En grève - Fermé toute la journée",lieu
 46.658986480077566, 6.5157313972574595,EPS de La Sarraz et environs,"Grève toute la journée, établissement fermé",lieu
 46.516767398686135, 6.500850483756686,ES de Morges - Beausobre,"En grève - Fermé toute la journée",lieu
@@ -85,3 +87,6 @@ lat,lng,title,description,type
 46.521477788452756, 6.63781202194692, Action - Secteur de l'accueil, "16h30 - Action pour soutenir l'EVAM",action
 46.526244601940085, 6.600449807105741, Sleep-In, "En grève",lieu
 46.54128680483616, 6.64954744421074, HETSL, "En grève", lieu
+46.519082445663734, 6.566828219244918, EPFL, "En grève", lieu
+46.82175230972882, 6.500950814045645, CPNV - Site de Ste-Croix, "En grève", lieu
+46.77369702700442, 6.634864727532476, CPNV - Site Yverdon-les-Bains, "En grève", lieu
