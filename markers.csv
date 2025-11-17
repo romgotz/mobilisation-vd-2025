@@ -10,7 +10,7 @@ lat,lng,title,description,type
 46.550747016629956, 6.552091483758313,EPS de Bussigny et Villars-Ste-Croix,"En grève - Fermé toute la journée",lieu
 46.53499353956518, 6.573165210745519,EPS de Chavannes-près-Renens et de St-Sulpice,"En grève | Fermé l'après-midi au P et toute la journée au secondaire",lieu
 46.54394361534468, 6.575046539581299,EPS de  Crissier,"En grève | 4 sites sur 5 seront fermés toute la journée, le 5 ème sera fermé l’après-midi",lieu
-46.58159980270433, 6.643936210747802,EPS de Cugy et environs,"En grève - Fermé toute la journée",lieu
+46.58159980270433, 6.643936210747802,EPS de Cugy et environs,"En grève",lieu
 46.5322958781098, 6.567973568416081,EPS d'Ecublens,"En grève | Fermé, toute la journée pour le secondaire et deux collèges Ps, l'après-midi pour un collège P",lieu
 46.545841467744175, 6.654805968416752,EPS d'Epalinges,"En grève",lieu
 46.55684191154278, 6.634687939581944,EPS du Mont-sur-Lausanne,"En grève | 9H-11H fermés toute la journée, Ps l'après-midi",lieu
@@ -23,7 +23,7 @@ lat,lng,title,description,type
 46.389424178466115, 6.224675126079991,EP de Nyon Jura et Prangins,"En grève - fermé l'après-midi",lieu
 46.52791624473912, 6.623780681909919,EP de Lausanne - Beaulieu,"En grève - Fermé l'après-midi",lieu
 46.52037332833328, 6.619472181909485,EPS Lausanne - Belvédère,"En grève - Fermé l'après-midi",lieu
-46.532185793183004, 6.621944454922087,EPS de Lausanne - Bergières,"En grève",lieu
+46.532185793183004, 6.621944454922087,EPS de Lausanne - Bergières,"En grève - Fermé l'après-midi",lieu
 46.52278369643984, 6.641871239580305,EPS de Lausanne - Béthusy,"En grève - Fermé toute la journée",lieu
 46.53741101415756, 6.630991110745695,EPS de Lausanne - CF Ramuz,"En grève- Fermé toute la journée",lieu
 46.53588767865661, 6.659003283757607,EP de Lausanne - Coteau Fleuri,"En grève - fermé l'après-midi",lieu
@@ -34,7 +34,7 @@ lat,lng,title,description,type
 46.5210445838081, 6.641462339580235,EP de Lausanne - Mon-Repos,"En grève - Fermé l'après-midi",lieu
 46.52674568513405, 6.6158812972511525,EP de Lausanne - Prélaz,"En grève - Fermé partiellement l'après-midi",lieu
 46.51899228994261, 6.638363683756804,EPS de Lausanne - Villamont,"En grève - Fermé toute la journée",lieu
-46.49249791232744, 6.76697857821352,EPS de centre Lavaux,"En grève - Fermé toute la journée",lieu
+46.49249791232744, 6.76697857821352,EPS de centre Lavaux,"En grève",lieu
 46.47157142076017, 6.845075639577858,EPS de Corsier-sur-Vevey et environs,"En grève | 2 sites fermées toute la journée, 2 l'après-midi",lieu
 46.50791408630064, 6.684955468414976,EPS de Lutry,"En grève",lieu
 46.435238722294514, 6.913222654917503,EPS de Montreux-Est,"En grève | Site de la Gare 33 (7-11) , collèges de Collonge, Glion, Vernex et Veytaux (1-6) fermés pour la journée / Collèges d'Etraz et Chernex (1-6) fermés l'après-midi",lieu
@@ -62,7 +62,7 @@ lat,lng,title,description,type
 46.531993359651906, 6.627069711027339,Bâtiment Administratif de la Pontaise,"En grève|Dès 7h45 - Piquets de grève |9h-10h30 - Café solidaire|11h-12h Conférence 'Capitalisme en crise et austerité : quand l'Etat est géré comme une entreprise privée'|12h30 - AG|14h-15h - Conférence 'Grèves en Suisse : entre conquêtes et perspectives'|15h30 - Atelier pancartes| 16h30 - Départ à la manif",lieu
 46.5266050475059, 6.643014225151977,CHUV,"En grève.|Programme| Dès 6h - Piquets de grève | 10h30 - AG|12h-13h - Rassemblement devant le BH|17h - Rassemblement et départ collectif pour la manif",lieu
 46.539629048986264, 6.652379962420256,Fondation Madame Charles Eynard Eynard,"En grève",lieu
-46.53115205877549, 6.612109151288422, Maison des Jeunes - Prilly, "En grève", lieu
+46.53115205877549, 6.612109151288422, Maison des Jeunes - Prilly, "En grève, lieu
 46.52131435121452, 6.581446925945201, UNIL, "Personnel et étudiant.es en grève | Programme | Dès 7h - Piquets de grève à Géopolis, Amphimax, Anthropole, Biophore | Matinée - Ateliers, Cours alternatifs, interventions dans les amphis | 12h - Bouffe pop' à Géopolis | 15h -  AG | 16h30 - Départ collectif pour la manifestation depuis Géopolis",lieu
 46.524917380974834, 6.638039839148172, CPNV - Site de César-Roux, "En grève", lieu
 46.44184722723823, 6.891508869833245, Ecole professionnelle de Montreux, "En grève", lieu
@@ -73,16 +73,15 @@ lat,lng,title,description,type
 46.51320871634183, 6.620452630879881, HEP, "En grève || Dès 7h45 - Piquets de grève | 12h - AG | Dès 14h30 - Atelier pancartes | 17h30 - Départ groupé pour la manifestation",lieu 
 46.522464532934286, 6.631556347073034,Action - Secteur de l'enfance, "Mardi 18 novembre à 16h30 - Action sur la place du 14 juin||Appel à tou.te.s les professionnel.le.s de l'enfance et les familles solidaires à y participer ! | L’action est autorisée et une grande banderole sera confectionnée collectivement avec la participation des enfants qui le souhaitent!",action
 46.520546855414466, 6.629603962418711,Pôle Sud, "Activités à Pôle Sud |12h-14h - Repas pour soutenir la mobilisation|14h-17h - Espaces d'échange, cafés, atelier banderole|17h30 - Départ collectif pour la manifestation",lieu
-46.77037860088358, 6.648140406620807, EHNV - Yverdon, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.52294499779811, 6.500467527512543, EHC Morges, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.38041943289959, 6.92066125684209, HRC Rennaz, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.47907856869659, 6.852865131723796, Fondation du Nant, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.60175194244001, 6.222078081481354, Pôle santé de la Vallée de Joux, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.38372410801154, 6.2288229711795795, GHOL - Nyon,"Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !", action
-46.53328351038571, 6.660711125153929, Le Foyer, "Action et mobilisation sur le lieu de travail", lieu
-46.522264815687855, 6.633189310311524, Action - Bas Seuil, "17h30 - Action en soutien au Bas Seuil !", action
-46.52204135205969, 6.5970124339779055, EVAM, "En grève", lieu
-46.521477788452756, 6.63781202194692, Action - Secteur de l'accueil, "16h30 - Action pour soutenir l'EVAM", action
-46.526244601940085, 6.600449807105741, Sleep-In, "En grève", lieu
-
-
+46.77037860088358, 6.648140406620807, EHNV - Yverdon, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.52294499779811, 6.500467527512543, EHC Morges, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.38041943289959, 6.92066125684209, HRC Rennaz, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.47907856869659, 6.852865131723796, Fondation du Nant, ""Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.60175194244001, 6.222078081481354, Pôle santé de la Vallée de Joux, "Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.38372410801154, 6.2288229711795795, GHOL - Nyon,"Action du secteur parapublique|| 13h - dans le hall|| Adressons un carton rouge au Conseil d'Etat !",action
+46.53328351038571, 6.660711125153929, Le Foyer, "Action et mobilisation sur le lieu de travail",lieu
+46.522264815687855, 6.633189310311524, Action - Bas Seuil, "17h30 - Action en soutien au Bas Seuil !",action
+46.52204135205969, 6.5970124339779055, EVAM, "En grève",lieu
+46.521477788452756, 6.63781202194692, Action - Secteur de l'accueil, "16h30 - Action pour soutenir l'EVAM",action
+46.526244601940085, 6.600449807105741, Sleep-In, "En grève",lieu
+46.54128680483616, 6.64954744421074, HETSL, "En grève", lieu
